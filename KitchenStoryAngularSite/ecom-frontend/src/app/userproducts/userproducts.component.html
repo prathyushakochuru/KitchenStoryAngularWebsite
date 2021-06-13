@@ -1,0 +1,32 @@
+
+<h3>Showing products for {{strsearch}}</h3>
+
+
+<h1>Product List </h1>
+
+<table class="table table-striped table-bordered">
+    
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <th scope="row" >{{p.id}}</th>
+        <td>{{p.productname}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.price}}</td>
+        <td>
+            <button type="button" class="btn btn-warning" (click)="addtoCart(p)">  Add to cart</button> &nbsp;
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
